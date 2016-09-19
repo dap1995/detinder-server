@@ -1,0 +1,28 @@
+<h2>Show detento</h2>
+
+<ul>
+
+  <li>
+    <strong>Nome:</strong>
+    <%= @detento.nome %>
+  </li>
+
+  <li>
+    <strong>Rg:</strong>
+    <%= @detento.rg %>
+  </li>
+
+  <li>
+    <strong>Cpf:</strong>
+    <%= @detento.cpf %>
+  </li>
+
+  <li>
+    <strong>Imagem:</strong>
+    <%= @detento.imagem %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: detento_path(@conn, :edit, @detento) %>
+<%= link "Back", to: detento_path(@conn, :index) %>

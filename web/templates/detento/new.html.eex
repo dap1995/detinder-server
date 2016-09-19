@@ -1,0 +1,6 @@
+<h2>New detento</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: detento_path(@conn, :create) %>
+
+<%= link "Back", to: detento_path(@conn, :index) %>

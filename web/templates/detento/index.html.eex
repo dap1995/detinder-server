@@ -1,0 +1,32 @@
+<h2>Listing detentos</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Rg</th>
+      <th>Cpf</th>
+      <th>Imagem</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for detento <- @detentos do %>
+    <tr>
+      <td><%= detento.nome %></td>
+      <td><%= detento.rg %></td>
+      <td><%= detento.cpf %></td>
+      <td><%= detento.imagem %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: detento_path(@conn, :show, detento), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: detento_path(@conn, :edit, detento), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: detento_path(@conn, :delete, detento), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New detento", to: detento_path(@conn, :new) %>
