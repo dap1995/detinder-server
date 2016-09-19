@@ -1,4 +1,4 @@
-FROM tsuru/elixir
+FROM elixir
 
 MAINTAINER Daniel André <daniel@16hop.com.br>
 
