@@ -39,6 +39,7 @@ config :detinder, Detinder.Repo,
   username: "postgres",
   password: "postgres",
   database: "detinder_dev",
-  hostname: "127.0.0.1",
+  hostname: "postgres-70ab3b11-1",
+#  hostname: "127.0.0.1",
 #  hostname: "200.98.30.22",
   pool_size: 10
