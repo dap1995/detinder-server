@@ -11,6 +11,6 @@ RUN mix local.hex --force
 RUN mix local.rebar --force
 RUN mix deps.get
 RUN mix compile
-ENV PORT 8080
+#ENV PORT 8080
 
 CMD  mix ecto.create && mix ecto.migrate && mix phoenix.server
